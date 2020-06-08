@@ -26,7 +26,7 @@ const SecondSet = () => {
 				border: '2px solid',
 				margin: "25px 150px 0px 150px"
 			}}>
-				<input type="text" />
+				<input type="text" style={{margin: "0 10px 0 0"}} />
 				<button>I did it!</button>
 		</div>
 	);
