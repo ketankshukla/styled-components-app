@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import { ThemeProvider } from 'styled-components';
 import './App.css';
+import CustomButton from './elements/CustomButton';
+import CustomInput from './elements/CustomInput';
+import H1 from './elements/H1';
+
+const theme = {
+	primary: 'red',
+	secondary: 'green',
+	alert: 'orange',
+	font: 'sans-serif',
+	customInputTheme: {
+		inputPadding: '10px 10px',
+		inputMargin: '15px',
+		inputBorder: 'none'
+  },
+  buttonTextColor: 'purple'
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<div className="App">
+				<H1>Styled Components</H1>
+				<form action="">
+					<CustomInput type="text" padding="inputPaddding" margin="inputMargin" border="inputBorder" />
+					<CustomButton color="alert">Create</CustomButton>
+				</form>
+			</div>
+		</ThemeProvider>
+	);
 }
 
 export default App;
