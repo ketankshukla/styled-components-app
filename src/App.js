@@ -14,8 +14,22 @@ const theme = {
 		inputPadding: '10px 10px',
 		inputMargin: '15px',
 		inputBorder: 'none'
-  },
-  buttonTextColor: 'purple'
+	},
+	buttonTextColor: 'purple'
+};
+
+const SecondSet = () => {
+	return (
+		<div style={
+			{
+				padding: '10px',
+				border: '2px solid',
+				margin: "25px 150px 0px 150px"
+			}}>
+				<input type="text" />
+				<button>I did it!</button>
+		</div>
+	);
 };
 
 function App() {
@@ -26,6 +40,7 @@ function App() {
 				<form action="">
 					<CustomInput type="text" padding="inputPaddding" margin="inputMargin" border="inputBorder" />
 					<CustomButton color="alert">Create</CustomButton>
+					<SecondSet/>
 				</form>
 			</div>
 		</ThemeProvider>
